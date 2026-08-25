@@ -123,15 +123,9 @@ if (leftovers) throw new Error('local refs still present:\n  ' + leftovers.join(
 fs.mkdirSync(OUT,{recursive:true});
 fs.writeFileSync(path.join(OUT,'AugustanaDPT-YearOne.html'), doc);
 
-// body-only fragment for the Artifact publisher (it supplies the page skeleton)
-const head = doc.match(/<style>[\s\S]*?<\/style>/)[0];
-const bodyInner = doc.match(/<body>([\s\S]*)<\/body>/)[1];
-fs.writeFileSync(path.join(OUT,'artifact_index.html'),
-  `<title>${B.SITE_NAME}</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Serif:wght@600&display=swap">
-${head}
-${bodyInner}`);
+// The Artifact copy was RETIRED on 2026-08-25 — the published artifact
+// (0913857f-b4a0-429e-98f6-cc12468e44f7) is now a pointer page to the live
+// GitHub Pages site and must not be overwritten with site content again.
+// This script emits only the single-file build above.
 
 console.log('standalone', (fs.statSync(path.join(OUT,'AugustanaDPT-YearOne.html')).size/1024).toFixed(0)+'KB');
