@@ -1,5 +1,6 @@
 const L = require('/home/claude/notes_lib.js');
 const {C,h1,h2,body,bullet,tnote,tip,compare,detail,infoBox,banner,glossary,fig,pageBreak,spacer,cover,build,linkBox} = L;
+const E = "/home/claude/emb36/";
 const k=[];
 
 k.push(...cover("Human Physiology (DPTH 6131)","Module 11: The Gastrointestinal System",
@@ -24,6 +25,7 @@ k.push(bullet("**Deglutition (swallowing):** trigeminal nerve senses palatal ele
 k.push(h1("3. Stomach"));
 k.push(body("Food arriving triggers **gastrin** (from G-cells, via the bloodstream) → an acid factory spins up. In the **gastric pits**: **parietal cells** secrete hydrochloric (gastric) acid, **chief (peptic) cells** secrete **pepsinogen** (protein breakdown), and **mucous neck cells** coat the stomach in the protective mucus layer that keeps a **pH ~0.8** environment (≈3 million times more H⁺ than arterial blood) from digesting its owner. Mechanical **churning** turns it all into **chyme**, released into the duodenum."));
 k.push(bullet("Acid throttle — stimulated by: gastrin, acetylcholine. Inhibited by: **prostaglandins** (which is why chronic NSAIDs endanger the gastric lining), **proton pump inhibitors** (block the H⁺ pump — e.g., omeprazole), and **bicarbonate** from the pancreas."));
+k.push(...fig(E+"fig_stomach.png",2019,1152,"The stomach's cell cast: G-cells (gastrin), parietal cells (acid), chief cells (pepsinogen), and the gastric pit that houses them (11.1 GI Physiology deck)"));
 
 k.push(h1("4. Small intestine (duodenum → jejunum → ileum)"));
 k.push(detail(["Duodenal hormone","What it does"],[
@@ -32,6 +34,7 @@ k.push(detail(["Duodenal hormone","What it does"],[
  ["GIP","Prompts the pancreas to release **insulin**, prepping the body for the incoming glucose"]],[22,78]));
 k.push(bullet("Movement shifts from pure peristalsis to **segmentation** (churn-and-mix) — the small intestine's length and squiggles buy TIME to finish digestion into absorbable units: monosaccharides, amino acids, glycerol + fatty acids."));
 k.push(bullet("**Absorption happens mostly in the jejunum and ileum** (the stomach absorbs almost nothing). Surface area is the whole game: circular folds → **villi** (~10× absorption) → **microvilli** on the brush border (~another 20×), each villus with its own blood supply feeding absorbed nutrients straight into circulation."));
+k.push(...fig(E+"fig_villi.png",2019,1138,"Villi on the folds of Kerckring, each with its own vasculature — the surface-area machine of absorption (11.1 deck)"));
 
 k.push(h1("5. Large intestine and the exit"));
 k.push(bullet("Chyme enters through the **ileocecal valve** → ascending → transverse → descending colon → rectum. Main jobs: absorb **water and electrolytes** (sodium actively transported; water follows by osmosis — and **aldosterone** can turn absorption up), and host the **gut microbiota**: bacteria that digest the fiber we can't, producing vitamin K (clotting), B12, thiamine, riboflavin, and supporting immune health (the case for probiotics; methane is the odorous byproduct). What remains is feces."));

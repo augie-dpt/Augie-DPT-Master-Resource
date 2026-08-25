@@ -1,5 +1,6 @@
 const L = require('/home/claude/notes_lib.js');
 const {C,h1,h2,body,bullet,tnote,tip,compare,detail,infoBox,banner,glossary,fig,pageBreak,spacer,cover,build,linkBox} = L;
+const E = "/home/claude/emb36/";
 const k=[];
 
 k.push(...cover("Human Physiology (DPTH 6131)","Module 9: Bioenergetics and Nutrition",
@@ -50,6 +51,7 @@ k.push(detail(["System","Duration","Sport picture"],[
  ["Anaerobic glycolysis","~**1.3–1.6 min**","200 m dash, 100 m swim"],
  ["Aerobic/oxidative (ETC)","**2+ min** to hours","Marathon, cross-country skiing"]],[30,40,30]));
 k.push(bullet("The systems overlap — every activity blends them — and **training shifts the blend**: an elite runner cruises aerobically through work that would max out a sedentary person's systems."));
+k.push(...fig(E+"fig_energysystems.png",2028,1153,"The three exercise energy systems and their sport durations (9.2 Glucose Metabolism deck)"));
 
 /* ─────────────────────────── 9.3 FAT & PROTEIN METABOLISM ─────────────────────────── */
 k.push(banner("TOPIC 9.3","Fat & Protein Metabolism — the Backup Fuels"));
@@ -74,6 +76,7 @@ k.push(infoBox("Female athlete triad → RED-S",[
  "The triad links three spokes: energy availability ↔ menstrual function ↔ bone mineral density — low energy availability suppresses estrogen → amenorrhea → bone loss/osteoporosis. Women in aesthetic/endurance sports are ~10× more affected than men",
  "**RED-S (Relative Energy Deficiency in Sport)** widens the lens: immune, GI, and cardiovascular function all sag too, and it includes male athletes",
  "Treatment: education, activity modification, nutritional restoration, mental-health support"],C.purple,C.lightPurple));
+k.push(...fig(E+"fig_reds.png",818,472,"RED-S: low energy availability radiates into every system — not just menstrual function and bone (9.4 Energy Availability deck, after the IOC consensus statement)"));
 
 k.push(h1("9. Too much energy"));
 k.push(bullet("Surplus (sedentary life, over-intake, hormonal issues) is stored as **adipose tissue** — subcutaneous, intra-abdominal, intrahepatic. Ideal body fat ~**11–14% (men)** / **16–23% (women)**. Measures: Bod Pod, hydrostatic weighing, skinfolds, bioimpedance; **BMI = kg/m²** is the accessible screen (~70% of US adults over 20 are overweight or obese)."));

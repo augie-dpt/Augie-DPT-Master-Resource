@@ -1,11 +1,12 @@
 const L = require('/home/claude/notes_lib.js');
 const {C,h1,h2,body,bullet,tnote,tip,compare,detail,infoBox,banner,glossary,fig,pageBreak,spacer,cover,build,linkBox} = L;
+const E = "/home/claude/emb36/";
 const k=[];
 
 k.push(...cover("Human Physiology (DPTH 6131)","Module 14: The Reproductive System",
  "Topics: 14.1 Male • 14.2 Female • 14.3 Reproductive Pathology • 14.4 Pregnancy & Fetal Development • 14.5 Pregnancy Pathology • Sync: Joon & Ari across the lifespan",
  ["Lectures by Dr. Evan Andreyo; anatomy was covered in your anatomy coursework — this is the physiology and the hormones",
-  "This is the FINAL content module of the course: Module 15 has no new content (Muddiest Points board + individual AND team final exams), and the reproductive quiz is due Friday 10 pm CST",
+  "This is the FINAL content module of the course: Module 15 has no new content (Muddiest Points board + individual AND team final exams) — and a reproductive-system quiz closes out the content (check Canvas for the due date)",
   "The engine everywhere: hypothalamic GnRH → anterior pituitary LH + FSH → gonads → testosterone or estrogen/progesterone",
   "The sync case follows Joon and Ari from puberty through pregnancy to age 51/48 (prostate, menopause) — worked at the end"]));
 
@@ -32,6 +33,7 @@ k.push(compare("OVARIAN CYCLE","ENDOMETRIAL CYCLE",
   "**Secretory phase:** corpus-luteum progesterone adds vascularity and stockpiles **glycogen + lipids** — packed lunch for a possible embryo",
   "**Menstrual phase:** no implantation → estrogen + progesterone collapse → the endometrium sheds over ~4–7 days, and the cycle restarts"],
  C.blue,C.teal,C.lightBlue,C.lightTeal));
+k.push(...fig(E+"fig_cycles.png",1992,1111,"The two cycles on one 28-day axis: follicle → ovulation → corpus luteum above, endometrial proliferation → secretion → menstruation below, with the estradiol and progesterone curves (14.2 Female Reproductive deck)"));
 k.push(bullet("**Feedback quirk:** estrogen runs BOTH loops — early on it feeds back positively (more LH/FSH → more estrogen; activin helps), then past a threshold it flips inhibitory (with inhibin) to close the cycle down."));
 k.push(bullet("**Menopause (~40–50):** the oocyte supply runs out → estrogen production collapses → nothing left to inhibit LH/FSH, which **spike** while estrogen craters. Consequences below."));
 k.push(tnote("Injury relevance: cyclical estrogen affects ligamentous laxity, and females tend toward multi-planar dynamic knee valgus on landing (vs the stiffer sagittal male pattern) — part of why ACL injury risk is higher in female athletes, especially through puberty."));
@@ -62,6 +64,7 @@ k.push(infoBox("Exercise during pregnancy — the evidence is emphatic",[
  "Contraindications and prescription parameters come in later coursework — the headline now: exercise is GOOD for pregnant patients"],C.green,C.lightGreen));
 k.push(h1("Fetal milestones and birth"));
 k.push(bullet("Stages: **germinal** (conception–week 2) → **embryonic** (weeks 3–8) → **fetal** (week 9–birth). First trimester: heartbeat by ~week 4, neural tube forms, most organs begin (before mom even knows), blood cells ~week 6. Second: bones ossify, GI moves, kidneys start. Third: massive length/weight gain. **Fetal circulation** bypasses liver (**ductus venosus**) and lungs (**foramen ovale**) since the placenta does that work — both must close at birth (cardiopulmonary pathology when they don't)."));
+k.push(...fig(E+"fig_fetalcirc.png",1933,1153,"Fetal circulation: umbilical vein in, ductus venosus past the liver, foramen ovale past the lungs (14.4 Pregnancy & Fetal Development deck)"));
 k.push(bullet("**Parturition:** late-term estrogen overtakes progesterone (progesterone inhibits contractions; estrogen promotes them) → the fetal head presses the cervix → **oxytocin** released → stronger contractions → more pressure → more oxytocin — a textbook **positive feedback loop** (~week 40; twins ~19 days earlier from extra uterine stretch). Postpartum: estrogen/progesterone crash lifts their brake on milk; **prolactin** drives secretion and **oxytocin** drives letdown."));
 
 /* ─────────────────────────── 14.5 PREGNANCY PATHOLOGY ─────────────────────────── */

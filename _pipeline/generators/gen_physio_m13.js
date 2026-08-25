@@ -1,5 +1,6 @@
 const L = require('/home/claude/notes_lib.js');
 const {C,h1,h2,body,bullet,tnote,tip,compare,detail,infoBox,banner,glossary,fig,pageBreak,spacer,cover,build,linkBox} = L;
+const E = "/home/claude/emb36/";
 const k=[];
 
 k.push(...cover("Human Physiology (DPTH 6131)","Module 13: The Renal System",
@@ -16,6 +17,7 @@ k.push(h1("1. What the renal system actually does"));
 k.push(bullet("Excretes **metabolic waste** (urea, creatinine); regulates **water + electrolyte balance** (and through it, **blood pressure**); maintains **acid-base balance**; and drives red-cell production via **erythropoietin** (Module 12)."));
 k.push(h1("2. The nephron — the functional unit"));
 k.push(body("Millions per kidney; regenerate in health, decline with age and disease. Blood arrives by the renal artery → **afferent arteriole** → glomerular capillaries inside **Bowman's capsule** → **efferent arteriole** out. Fenestrations admit only small molecules — about **20% of renal plasma flow** filters in, carrying sodium, glucose, amino acids; red cells, white cells, and large proteins never enter (red cells are the spleen's job)."));
+k.push(...fig(E+"fig_nephron.png",1965,1079,"The nephron: cortical and juxtamedullary nephrons with the full tubule route from Bowman's capsule to collecting duct (13.1 Kidney & Nephron deck)"));
 k.push(detail(["Step","What happens"],[
  ["Filtration","Plasma + small solutes pushed from glomerulus into Bowman's capsule"],
  ["Reabsorption","What we want returns to blood: glucose, amino acids, sodium/chloride/potassium, bicarbonate — and **water follows the electrolytes by osmosis** (pull sodium, water comes; this is THE blood-pressure lever)"],
@@ -45,6 +47,7 @@ k.push(infoBox("RAAS — renin-angiotensin-aldosterone system",[
  "Renin converts liver-made **angiotensinogen → angiotensin I → angiotensin II** (the mover and shaker)",
  "Angiotensin II vasoconstricts everywhere but ESPECIALLY the **efferent arteriole** — kinking the outlet to PREVENT GFR from falling — and boosts sodium + water reabsorption",
  "It also triggers **aldosterone** release, which retains still more sodium and water → blood pressure recovers"],C.blue,C.lightBlue));
+k.push(...fig(E+"fig_raas.png",1958,1041,"RAAS: JG cells sense pressure, macula densa senses sodium → renin → angiotensinogen → angiotensin II (13.2 Glomerular Filtration deck)"));
 
 /* ─────────────────────────── 13.3 + 13.4 ACID-BASE ─────────────────────────── */
 k.push(pageBreak());

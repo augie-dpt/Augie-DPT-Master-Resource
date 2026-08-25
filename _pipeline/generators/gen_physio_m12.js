@@ -1,5 +1,6 @@
 const L = require('/home/claude/notes_lib.js');
 const {C,h1,h2,body,bullet,tnote,tip,compare,detail,infoBox,banner,glossary,fig,pageBreak,spacer,cover,build,linkBox} = L;
+const E = "/home/claude/emb36/";
 const k=[];
 
 k.push(...cover("Human Physiology (DPTH 6131)","Module 12: Hematology and Immunology",
@@ -20,6 +21,7 @@ k.push(detail(["Cell","Job","Details to keep"],[
  ["Platelets (thrombocytes)","Clotting, inflammation, healing","Nucleus-free megakaryocyte fragments — \"traveling piñatas\" of histamine, coagulation proteins, cytokines, growth factors"],
  ["White blood cells (leukocytes)","Defense — mobile units that hunt infection by **chemotaxis**","Made in marrow AND lymph tissue; myeloid types + lymphoid T/B cells"]],[22,32,46]));
 k.push(bullet("**Erythropoietin (EPO):** the kidneys sense low oxygen in the blood filtering through them → release EPO → bone marrow steps up red-cell production. (Erythro = red cell, -poiesis = to make.)"));
+k.push(...fig(E+"fig_marrow.png",2028,1153,"Where blood is made across the lifespan: yolk sac → liver → long bones → (by adulthood) vertebrae, sternum, ribs — and marrow cellularity falls with age (12.1 Blood Composition deck)"));
 
 /* ─────────────────────────── 12.2 HEMOSTASIS ─────────────────────────── */
 k.push(banner("TOPIC 12.2","Hemostasis — Stop, Hold, and Dissolve"));
@@ -34,6 +36,7 @@ k.push(infoBox("The cascade, PT-sized",[
  "Prothrombin activator converts free-floating **prothrombin → thrombin**",
  "Thrombin converts free-floating **fibrinogen → fibrin**, which polymerizes into the mesh",
  "This is a **positive feedback** loop — it amplifies until stopped. Lab check: prothrombin time, reported as **INR** (know what the acronym is; look up norms when you see it)"],C.blue,C.lightBlue));
+k.push(...fig(E+"fig_clotting.png",2028,1153,"The cascade in one picture: tissue factor → prothrombin activator → prothrombin→thrombin → fibrinogen→fibrin, polymerizing over the platelet plug (12.2 Hemostasis deck)"));
 k.push(h1("3. Stopping and dissolving clots"));
 k.push(bullet("**Why we don't clot everywhere:** smooth endothelium gives nothing to stick to; anticoagulants outnumber coagulants in circulating blood; fibrin itself soaks up thrombin locally; **thrombomodulin** on healthy vessel walls binds stray thrombin; and **antithrombin III + heparin** (yes, the drug) shut thrombin down fast."));
 k.push(bullet("**Fibrinolysis:** tissue releases **tPA (tissue plasminogen activator)** → converts **plasminogen → plasmin** → plasmin \"Pac-Mans\" the clot apart. tPA is the drug given for ischemic stroke for exactly this reason."));

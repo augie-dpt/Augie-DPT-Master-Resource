@@ -1,9 +1,10 @@
 const L = require('/home/claude/notes_lib.js');
 const {C,h1,h2,body,bullet,tnote,tip,compare,detail,infoBox,banner,glossary,fig,pageBreak,spacer,cover,build,linkBox} = L;
+const E = "/home/claude/emb36/";
 const k=[];
 
 k.push(...cover("Human Physiology (DPTH 6131)","Module 8: The Musculoskeletal System",
- "Topics: 8.1 Muscle Physiology • 8.2 Connective Tissue • 8.3 Muscle Pathophysiology & Aging • Sync: three case scenarios",
+ "Topics: 8.1 Muscle Tissue (physiology, then pathophysiology & aging) • 8.2 Connective Tissue • Sync: three case scenarios",
  ["Lectures by Dr. Evan Andreyo (PT, DPT — board-certified orthopaedic + sports specialist); watch in your own Canvas module",
   "Required videos: Khan Academy muscle-tissue series + the Osmosis bone videos linked on the Canvas topic pages",
   "References: Guyton & Hall 14e Ch 6–8; Goodman & Fuller Pathology Ch 22–23, 25–26 (optional but heavily mined for these lectures)",
@@ -20,6 +21,7 @@ k.push(bullet("**Tropomyosin** winds around actin \"like a Twizzler,\" physicall
 k.push(bullet("Ca²⁺ binds the troponin complex → tropomyosin swings off the active sites → myosin heads bind actin and, using **ATP**, execute the **power stroke** that slides the filaments past each other."));
 k.push(bullet("Relaxation = pumping Ca²⁺ back into the SR (which also costs ATP), re-blocking the sites until the next action potential."));
 k.push(bullet("Graded force comes from **summation**: more stimulus → more action potentials → more fibrils recruited and re-stimulated → stronger contraction."));
+k.push(...fig(E+"fig_troponin.png",818,472,"Tropomyosin winds around actin covering the active sites; calcium moves it aside and the myosin heads power-stroke along the filament (8.1 Muscle Physiology deck)"));
 
 k.push(h1("3. Fueling the contraction — and why it fails"));
 k.push(detail(["Energy source","Lasts about","Notes"],[
@@ -46,6 +48,7 @@ k.push(compare("TYPE I — SLOW TWITCH","TYPE II — FAST TWITCH",
   "Jobs: strength and power — sprints, Olympic lifts",
   "Trained by heavy work (~1–5 RM) • mixed 6–10 RM hits both"],
  C.blue,C.red,C.lightBlue,C.lightRed));
+k.push(...fig(E+"fig_fibertypes.png",818,472,"The recruitment picture: small type I fibers fire first at low force; heavy 1–5 RM work is what reaches the big type II pool (8.1 deck, after Kraemer & Looney 2012)"));
 k.push(bullet("**Strength vs power:** strength = force you can generate; power = work/time (work = force × displacement) — power has a **velocity** component. Most muscles (e.g., quadriceps) carry a task-matched mix of fiber types, and that mix is **mostly hereditary** — training shifts maybe 10–20%."));
 k.push(tip("Exercise-prescription takeaway the lecture hammers: \"2 sets of 10 for everything\" ignores all of this. Ask what the patient needs — endurance, strength, or power — and dose the rep range to the fiber population you're trying to change."));
 
@@ -55,12 +58,36 @@ k.push(bullet("**~6 weeks on: hypertrophy.** Fiber cross-sectional area grows vi
 k.push(bullet("**Exercise-induced muscle damage (EIMD)** is part of the stimulus: micro-damage triggers hormonal (growth hormone, AMPK), immune/inflammatory, and metabolic responses that rebuild the tissue stronger."));
 k.push(bullet("**Atrophy** is the mirror image: with disuse (sling, bed rest, desk life), degradation of contractile proteins outruns replacement and mass drains away."));
 
+/* ─────────────────────────── 8.1b PATHOPHYS & AGING ─────────────────────────── */
+k.push(pageBreak());
+k.push(banner("TOPIC 8.1 (continued)","Muscle Pathophysiology & Aging"));
+k.push(spacer());
+
+k.push(h1("7. Sarcopenia"));
+k.push(body("**Age-related loss of muscle mass AND strength** (sarco = flesh, penia = deficiency) — distinct from simple disuse atrophy. Mechanisms: reduced myofiber regeneration, outright fiber loss with **preferential loss of type II (power) fibers**, shrinkage of surviving fibers, delayed excitation–contraction coupling, plus metabolic (glucose handling), endocrine (falling testosterone/growth hormone), nutritional, activity, and inflammatory (free-radical) contributions. Collagen and fatty infiltration also stiffen aging muscle and cost flexibility."));
+k.push(infoBox("Exercise is medicine — the counterpunch",[
+ "Multiset resistance training, ~10–15 reps, **2–3×/week** produces real strength gains and measurable cross-sectional-area growth in older adults",
+ "Bonus effects: better flexibility and improved glucose utilization (a gift for patients with diabetes)",
+ "The instructor's editorial: PTs habitually UNDER-prescribe for older adults — they can usually handle more than we give them credit for, as long as progression is sensible (aged tissue is easier to damage)"],C.green,C.lightGreen));
+
+k.push(h1("8. Musculotendinous injury"));
+k.push(detail(["Injury","What happens","Management logic"],[
+ ["Contusion","Direct impact → swelling/effusion; rare calcification within the muscle","Standard soft-tissue care"],
+ ["Strain (muscle or musculotendinous junction)","Traction/overexertion injury — think sprinter's hamstring; graded 1–3","Muscle regenerates: hemostasis → inflammation → debridement → myofibril regeneration/remodeling. Ice/NSAIDs early, then the same sweet-spot rule as ligaments: too much activity re-tears, too much immobilization atrophies"],
+ ["Tendinopathy","**Tendinitis** = acute inflammatory response. **Tendinosis** = chronic DEGENERATIVE collagen change with no active inflammation (most chronic \"tendinitis\" is really this)","Acute: relative rest ± anti-inflammatories. Degenerative: the opposite — **progressive loading (especially eccentric)** and soft-tissue work to re-provoke a healing response"],
+ ["Rhabdomyolysis","Extreme exertion breaks down skeletal muscle → myoglobin + creatine phosphokinase flood the blood; kidneys can't process it → dark urine, possible **acute renal failure** (statins raise risk)","Aggressive rehydration + electrolyte rebalancing; severe cases need dialysis"]],[18,44,38]));
+k.push(bullet("A **tendon** itself is dense regular connective tissue (collagen bundles \"like uncooked ramen noodles\"), maintained by sparse tenoblasts/tenocytes — it attaches **muscle to bone** and transmits pull."));
+
+k.push(h1("9. Genetic conditions"));
+k.push(bullet("**Down syndrome (trisomy 21)** — three copies of chromosome 21. MSK signature: **hypotonia + soft-tissue laxity** → joint instability, dislocations, scoliosis risk. PT implications: joint mobilizations/manipulations are generally **off the table**; focus on function. Incidence climbs steeply with maternal age (40s)."));
+k.push(bullet("**Muscular dystrophy** — six major inherited, progressive neuromuscular disorders with ongoing muscle wasting, often surfacing by ~age 10. The double bind: aggressive strengthening can overload tissue that can't rebuild, but prolonged rest produces unrecoverable atrophy — dosing is everything. (Neuromuscular courses go deeper.)"));
+
 /* ─────────────────────────── 8.2 CONNECTIVE TISSUE ─────────────────────────── */
 k.push(pageBreak());
 k.push(banner("TOPIC 8.2","Connective Tissue — Bone and Joint"));
 k.push(spacer());
 
-k.push(h1("7. Bone: function, development, remodeling"));
+k.push(h1("10. Bone: function, development, remodeling"));
 k.push(bullet("**Functions:** structure and levers for movement; storage of calcium, phosphate, sodium, magnesium; **hematopoiesis** in the marrow."));
 k.push(bullet("**Development:** most long bones grow by **endochondral ossification** (the hyaline-cartilage model) — osteoblasts convert the cartilage template to periosteum and spongy bone while osteoclasts hollow the medullary cavity; growth continues at the **epiphyseal plate**, where chondrocytes age, degenerate, and are replaced by new bone. (Skull bones use intramembranous ossification instead.)"));
 k.push(detail(["Development problem","What it is","Management"],[
@@ -76,17 +103,17 @@ k.push(detail(["Fracture type","Mechanism"],[
  ["Pathologic","Bone weakened by disease — e.g., neoplastic/metastatic lesions"]],[26,74]));
 k.push(bullet("**Healing** runs the standard phases — hematoma/inflammation → reparation (callus) → remodeling/ossification — and slows with age: children **4–6 weeks**, adolescents **6–8**, adults **10–18**."));
 
-k.push(h1("8. Ligaments"));
+k.push(h1("11. Ligaments"));
 k.push(body("**Dense regular connective tissue** (parallel fibers), attaching **bone to bone** to stabilize joints — versus tendons, which attach muscle to bone to move them. Fibroblasts synthesize mostly **type I collagen**, with elastic fibers adding a little accommodating stretch. Sprains are graded 1–3 by damage extent; healing follows hemorrhage → inflammation → proliferation → remodeling, but the repaired tissue often comes back as **fibrotic scar** with less integrity than the original."));
 k.push(tnote("Two clinical judgment calls the lecture flags: (1) immobilization has a sweet spot — too much movement too early and the ligament never regains integrity, too little and it heals weak and lax; (2) LOCATION rules prognosis — extra-articular ligaments (MCL, ATFL) heal well, intra-articular ones (ACL) mostly don't, which is why ACL tears get reconstructed."));
 
-k.push(h1("9. Cartilage — three types, two problem children"));
+k.push(h1("12. Cartilage — three types, two problem children"));
 k.push(detail(["Type","Where","Character"],[
  ["Elastic","Ear, epiglottis, trachea","Springy, shape-holding"],
  ["Fibrocartilage","Menisci, vertebral discs","Dense IRREGULAR tissue (fibers crisscross) built for cushioning axial load — but shear/twisting forces tear it. Meniscal healing depends on the red → pink → white vascularity zones"],
  ["Hyaline (articular)","Joint surfaces","Mostly water, ultra-slick; chondrocytes maintain the matrix. **Aneural** (you don't feel damage until it reaches bone) and **avascular** (it barely heals — and what does heal comes back as rougher fibrocartilage)"]],[16,26,58]));
 
-k.push(h1("10. Arthritis: OA vs RA"));
+k.push(h1("13. Arthritis: OA vs RA"));
 k.push(compare("OSTEOARTHRITIS (degenerative)","RHEUMATOID ARTHRITIS (systemic)",
  ["The most common MSK disorder worldwide; weight-bearing joints (hips, knees) + hands",
   "Slow progressive loss of articular cartilage with bony overgrowth (osteophytes), hypertrophic changes, bony end-feel",
@@ -99,30 +126,6 @@ k.push(compare("OSTEOARTHRITIS (degenerative)","RHEUMATOID ARTHRITIS (systemic)"
   "Because it's autoimmune, treatment is primarily **medication** — anti-inflammatories and immunosuppressants",
   "PT role centers on function and joint protection, not fixing the immune process"],
  C.teal,C.blue,C.lightTeal,C.lightBlue));
-
-/* ─────────────────────────── 8.3 PATHOPHYS & AGING ─────────────────────────── */
-k.push(pageBreak());
-k.push(banner("TOPIC 8.3","Muscle Pathophysiology & Aging"));
-k.push(spacer());
-
-k.push(h1("11. Sarcopenia"));
-k.push(body("**Age-related loss of muscle mass AND strength** (sarco = flesh, penia = deficiency) — distinct from simple disuse atrophy. Mechanisms: reduced myofiber regeneration, outright fiber loss with **preferential loss of type II (power) fibers**, shrinkage of surviving fibers, delayed excitation–contraction coupling, plus metabolic (glucose handling), endocrine (falling testosterone/growth hormone), nutritional, activity, and inflammatory (free-radical) contributions. Collagen and fatty infiltration also stiffen aging muscle and cost flexibility."));
-k.push(infoBox("Exercise is medicine — the counterpunch",[
- "Multiset resistance training, ~10–15 reps, **2–3×/week** produces real strength gains and measurable cross-sectional-area growth in older adults",
- "Bonus effects: better flexibility and improved glucose utilization (a gift for patients with diabetes)",
- "The instructor's editorial: PTs habitually UNDER-prescribe for older adults — they can usually handle more than we give them credit for, as long as progression is sensible (aged tissue is easier to damage)"],C.green,C.lightGreen));
-
-k.push(h1("12. Musculotendinous injury"));
-k.push(detail(["Injury","What happens","Management logic"],[
- ["Contusion","Direct impact → swelling/effusion; rare calcification within the muscle","Standard soft-tissue care"],
- ["Strain (muscle or musculotendinous junction)","Traction/overexertion injury — think sprinter's hamstring; graded 1–3","Muscle regenerates: hemostasis → inflammation → debridement → myofibril regeneration/remodeling. Ice/NSAIDs early, then the same sweet-spot rule as ligaments: too much activity re-tears, too much immobilization atrophies"],
- ["Tendinopathy","**Tendinitis** = acute inflammatory response. **Tendinosis** = chronic DEGENERATIVE collagen change with no active inflammation (most chronic \"tendinitis\" is really this)","Acute: relative rest ± anti-inflammatories. Degenerative: the opposite — **progressive loading (especially eccentric)** and soft-tissue work to re-provoke a healing response"],
- ["Rhabdomyolysis","Extreme exertion breaks down skeletal muscle → myoglobin + creatine phosphokinase flood the blood; kidneys can't process it → dark urine, possible **acute renal failure** (statins raise risk)","Aggressive rehydration + electrolyte rebalancing; severe cases need dialysis"]],[18,44,38]));
-k.push(bullet("A **tendon** itself is dense regular connective tissue (collagen bundles \"like uncooked ramen noodles\"), maintained by sparse tenoblasts/tenocytes — it attaches **muscle to bone** and transmits pull."));
-
-k.push(h1("13. Genetic conditions"));
-k.push(bullet("**Down syndrome (trisomy 21)** — three copies of chromosome 21. MSK signature: **hypotonia + soft-tissue laxity** → joint instability, dislocations, scoliosis risk. PT implications: joint mobilizations/manipulations are generally **off the table**; focus on function. Incidence climbs steeply with maternal age (40s)."));
-k.push(bullet("**Muscular dystrophy** — six major inherited, progressive neuromuscular disorders with ongoing muscle wasting, often surfacing by ~age 10. The double bind: aggressive strengthening can overload tissue that can't rebuild, but prolonged rest produces unrecoverable atrophy — dosing is everything. (Neuromuscular courses go deeper.)"));
 
 /* ─────────────────────────── SYNC SCENARIOS ─────────────────────────── */
 k.push(pageBreak());

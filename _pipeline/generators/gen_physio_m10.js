@@ -1,5 +1,6 @@
 const L = require('/home/claude/notes_lib.js');
 const {C,h1,h2,body,bullet,tnote,tip,compare,detail,infoBox,banner,glossary,fig,pageBreak,spacer,cover,build,linkBox} = L;
+const E = "/home/claude/emb36/";
 const k=[];
 
 k.push(...cover("Human Physiology (DPTH 6131)","Module 10: The Endocrine System",
@@ -46,6 +47,8 @@ k.push(detail(["Anterior pituitary cell type","Hormone released","Goes to / does
  ["Thyrotropes","**TSH**","Thyroid → T3/T4"],
  ["Gonadotropes","**LH + FSH**","Testes/ovaries → testosterone, estrogen, progesterone"],
  ["Lactotropes","**Prolactin**","Mammary glands → milk production (acts directly)"]],[30,24,46]));
+k.push(...fig(E+"fig_hypothal.png",1029,620,"The hypothalamus and its two routes into the pituitary: portal vessels at the median eminence (anterior) and direct neurons (posterior) (10.2 Glands & Hormones deck)"));
+k.push(...fig(E+"fig_antpit.png",1029,619,"The anterior pituitary's hormone map — each trope's hormone and its target organ (10.2 deck)"));
 k.push(bullet("**Growth hormone** deserves its own paragraph: it drives growth of body tissue (cell size, number, differentiation), boosts protein uptake/synthesis, **shifts fuel toward fat** (fatty acids → acetyl-CoA) while sparing glucose, and stimulates skeletal and chondral cell reproduction. It works arm-in-arm with **IGF-1 from the liver**. Stimulated by: low blood glucose/free fatty acids, exercise, trauma, stress, testosterone/estrogen. Inhibited by: abundant GH/IGF-1 (negative feedback), high blood glucose, aging, obesity."));
 
 k.push(h1("6. Thyroid"));

@@ -1,5 +1,6 @@
 const L = require('/home/claude/notes_lib.js');
 const {C,h1,h2,body,bullet,tnote,tip,compare,detail,infoBox,banner,glossary,fig,pageBreak,spacer,cover,build,linkBox} = L;
+const E = "/home/claude/emb36/";
 const k=[];
 
 k.push(...cover("Human Anatomy (DPTH 6111)","Module 11: Cervical Spine",
@@ -15,6 +16,7 @@ k.push(spacer());
 
 k.push(h1("1. The Seven Vertebrae"));
 k.push(bullet("**Three atypical:** C1 **atlas** · C2 **axis** · C7 **vertebra prominens.** **Four typical:** C3–C6."));
+k.push(...fig(E+"fig_cervvert.png",842,708,"A typical cervical vertebra, fully labeled: small body, transverse foramen, groove for the spinal nerve, and the bifid-ready spinous process (11.1 osteology deck, KenHub)"));
 k.push(detail(["Vertebra","Signature features"],[
  ["**C1 — Atlas**","**No body, no spinous process** — a ring of **anterior + posterior arches** joined by **lateral masses** (the load-bearers, in place of a body). Anterior tubercle anchors the ALL; the anterior arch's posterior surface carries a **facet for the dens**. Kidney-shaped **superior facets cup the occipital condyles**; the **second-longest transverse processes** in the neck act as rotation levers. Its huge vertebral foramen admits the cord fresh from the foramen magnum"],
  ["**C2 — Axis**","**The dens (odontoid process)** projects superiorly with an articular facet — the **pivot** the atlas and head rotate around. Pedicles, laminae, a strong spinous process"],
