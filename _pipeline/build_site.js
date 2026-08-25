@@ -11,11 +11,11 @@ const B = require('./brand.js');
 
 const COURSES = {
   '6111': {name:'Human Anatomy',                 slug:'human-anatomy',        term:'Trimester 1', mini:'Mini-mester 1.1', drive:'1jyJBZDHX4cgfDC52dO7-p3hNN0zpThu0', order:1,
-           dept:'DPTH 6111', staff:'', total:13, next:'back, abdomen, head & neck, upper limb still to come',
-           blurb:'Regional anatomy from the pelvis down, then back, trunk, head and upper limb. Runs the whole trimester.'},
+           dept:'DPTH 6111', staff:'', total:13, next:'every module with notes is written',
+           blurb:'Regional anatomy from the pelvis down, then back, trunk, head and upper limb. Complete.'},
   '6131': {name:'Human Physiology',              slug:'human-physiology',     term:'Trimester 1', mini:'Mini-mester 1.1', drive:'1cBHqgnIRz_PP2heIGYRwgLQIJD5BT2Kc', order:2,
-           dept:'DPTH 6131', staff:'', total:12, next:'MSK, bioenergetics, endocrine, GI, renal still to come',
-           blurb:'Cell to system: integumentary, cardiovascular, respiratory, neuromuscular and on through the trimester.'},
+           dept:'DPTH 6131', staff:'', total:12, next:'every module with notes is written',
+           blurb:'Cell to system: integumentary, cardiovascular, respiratory, neuromuscular, MSK, endocrine, GI, renal and reproductive. Complete.'},
   '6211': {name:'Physical Therapy Fundamentals', slug:'pt-fundamentals',      term:'Trimester 1', mini:'Mini-mester 1.1', drive:'1j9eFrqSQvy_I81CvvPcFEtpu7DqzIvVA', order:3,
            dept:'DPTH 6211', staff:'Shepherd / Bartley', total:7, next:'every module with notes is written',
            blurb:'The hands-on core: vitals, transfers, gait and devices, ROM, MMT, documentation and the ADA. Complete.'},
