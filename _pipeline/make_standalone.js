@@ -8,13 +8,14 @@ const DIST = '/home/claude/site/dist';
 const OUT  = '/home/claude/out';
 const B    = require('./brand.js');
 
-const DRIVE = {
-  'human-anatomy':               '1jyJBZDHX4cgfDC52dO7-p3hNN0zpThu0',
-  'human-physiology':            '1cBHqgnIRz_PP2heIGYRwgLQIJD5BT2Kc',
-  'pt-fundamentals':             '1j9eFrqSQvy_I81CvvPcFEtpu7DqzIvVA',
-  'movement-science':            '1uyDFSzcmclB_6gUS7Q9ETbWNCFuORuEt',
-  'professional-competencies-i': '11vQptZ4rtACOU2UqTkagg6G2ZTLGHDZJ',
-};
+// slug -> Drive folder id, derived from build_site.js's COURSES map so the two
+// files cannot drift (a hardcoded copy here once left new courses pointing at
+// the root folder).
+const DRIVE = {};
+for (const m of fs.readFileSync(path.join(__dirname,'build_site.js'),'utf8')
+       .matchAll(/slug:'([a-z-]+)'[^}]*?drive:'([A-Za-z0-9_-]+)'/g))
+  DRIVE[m[1]] = m[2];
+if (Object.keys(DRIVE).length < 5) throw new Error('DRIVE map extraction failed');
 const ROOT = 'https://drive.google.com/drive/folders/1UH2MQSjjOHp9bkhaiQhKZhbZvVTkRd_o';
 
 let html = fs.readFileSync(path.join(DIST,'index.html'),'utf8');
@@ -24,8 +25,8 @@ const js  = fs.readFileSync(path.join(DIST,'assets','site.js'),'utf8');
 // ---- course cards point into Drive, not to pages that aren't in this file ----
 html = html.replace(/href="courses\/([a-z-]+)\/index\.html"/g, (m, slug) => {
   const id = DRIVE[slug];
-  return id ? `href="https://drive.google.com/drive/folders/${id}" target="_blank" rel="noopener"`
-            : 'href="' + ROOT + '" target="_blank" rel="noopener"';
+  if (!id) throw new Error(`no Drive folder id for course slug "${slug}" — check COURSES in build_site.js`);
+  return `href="https://drive.google.com/drive/folders/${id}" target="_blank" rel="noopener"`;
 });
 // the card is now an outbound link — say so
 html = html.replace(/(<span class="pill (?:ready|done)">[^<]*<\/span>)/g,

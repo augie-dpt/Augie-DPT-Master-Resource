@@ -21,7 +21,7 @@ happening. See "Branding" below.
 | `notes_web.js` | Drop-in replacement for `notes_lib.js` with the same export surface. Emits **HTML**. `build_site.js` swaps the require path to render the site from the same source. |
 | `generators/gen_*.js` | One file per module. Holds that module's content as calls against the component API. 39 files. |
 | `legacy.js` | Handles Anatomy M1 + Physiology M1, which predate the component API. |
-| `make_standalone.js` | Emits the single-file HTML build and `artifact_index.html`. |
+| `make_standalone.js` | Emits the single-file HTML build and `artifact_index.html`. Derives its course→Drive map from `build_site.js` at run time — do not hardcode one. |
 | `assets/` | `style.css`, `site.js`, `search.js` sources. |
 
 ## Rebuild
@@ -57,9 +57,10 @@ description, any string from the `FORBIDDEN` list, or a missing
 `/* long brand: responsive topbar */` block in `style.css` (the long name
 overflows on phones without it).
 
-Deliberately *not* renamed: the hero "Welcome, Class of 2028", and the Start Here
-Drive link label "Augustana DPT — Year One Resource (root folder)", which names
-the actual Drive folder and must keep matching it.
+Deliberately *not* renamed: the hero "Welcome, Class of 2028". The Start Here
+Drive link label (`DRIVE_FOLDER_LABEL` in `brand.js`) must always match the
+actual Drive root folder's name — both were renamed to "Augustana DPT Resource"
+on 2026-08-25; if the folder is ever renamed again, change the label with it.
 
 Run the check on its own against any built tree:
 

@@ -32,9 +32,9 @@ const HOME_META_DESC =
 
 // Deliberately NOT renamed (Jake, 2026-08-24):
 //  - hero "Welcome, Class of 2028"
-//  - Start Here Drive link label "Augustana DPT — Year One Resource (root folder)"
-//    which names the actual Drive folder and must keep matching it.
-const DRIVE_FOLDER_LABEL = 'Augustana DPT — Year One Resource (root folder)';
+//  - the Start Here Drive link label, which must keep matching the actual Drive
+//    folder name (renamed to "Augustana DPT Resource" on 2026-08-25).
+const DRIVE_FOLDER_LABEL = 'Augustana DPT Resource (root folder)';
 
 // Strings that must never reappear in built output. verify_brand.js fails the
 // build on any of these. DRIVE_FOLDER_LABEL is whitelisted there by exact match.
